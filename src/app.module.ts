@@ -1,7 +1,8 @@
-import { Module } from '@nestjs/common';
+import { Module, CacheInterceptor } from '@nestjs/common';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
+import { APP_INTERCEPTOR } from '@nestjs/core';
 
 @Module({
   imports: [
@@ -19,7 +20,12 @@ import { Connection } from 'typeorm';
     })
   ],
   controllers: [],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: CacheInterceptor,
+    },
+  ],
 })
 export class AppModule {
   constructor(private readonly connection: Connection) { }
