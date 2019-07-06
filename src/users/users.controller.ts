@@ -25,4 +25,9 @@ export class UsersController {
     update(@Body() body: User){
         return this._userService.update(body);
     }
+
+    @Post('/authenticate')
+    authenticate(@Body() body: User){
+        return this._userService.authenticate(body);
+    }
 }

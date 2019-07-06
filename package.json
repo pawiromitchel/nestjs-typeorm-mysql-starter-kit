@@ -24,6 +24,7 @@
     "@nestjs/core": "^6.4.0",
     "@nestjs/platform-express": "^6.4.0",
     "@nestjs/typeorm": "^6.1.2",
+    "bcrypt": "^3.0.6",
     "cache-manager": "^2.9.1",
     "compression": "^1.7.4",
     "helmet": "^3.18.0",
