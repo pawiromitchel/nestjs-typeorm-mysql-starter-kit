@@ -1,7 +1,7 @@
 # NestJS test project
 
 A simple API build with
-1. NestJS
+1. NestJS ``` npm i -g @nestjs/cli ```
 2. TypeORM
 
 ## Installation
